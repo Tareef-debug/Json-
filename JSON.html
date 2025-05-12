@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <p id="APPLE"></p>
+    
+    <script>
+        var object = {Name:"Tareef", Age:10, Grade:3}
+        var Json = JSON.stringify(object)
+        var InObject = JSON.parse(Json)
+        document.getElementById("result").innerHTML = InObject.Name
+         function add(a,b) {
+            var sum =  a + b
+            document.getElementById("APPLE").innerHTML = sum
+        }
+        let promise = new Promise(function(myresolve,myreject){
+            let x = 0
+            if (x == 0){
+                myresolve("ok")
+            }
+            else {
+                myreject("error")
+            }
+        })
+        promise.then(
+            function(value){
+                add(2,69)
+            },
+            function(error){
+                add(error)
+            }
+        )
+    </script>
+</body>
+</html>
